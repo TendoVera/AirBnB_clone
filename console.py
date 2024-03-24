@@ -50,7 +50,7 @@ class HBNBCommand(cmd.Cmd):
         sys.exit(1)
 
     def do_EOF(self, arg):
-        """Handles the end-of-file command"""
+        
         return True
 
     def emptyline(self):
@@ -108,7 +108,7 @@ class HBNBCommand(cmd.Cmd):
                 storage.save()
 
     def do_all(self, args):
-        """Prints all string representation of instances"""
+        """Displays all string representations of instances"""
 
         all_instances = []
         if args != '':
@@ -130,7 +130,7 @@ class HBNBCommand(cmd.Cmd):
             print(all_instances)
 
     def do_update(self, *arguments):
-        """Updates an instance"""
+        """Modifies an instance."""
 
         arg = arguments[0].split(" ")
 
