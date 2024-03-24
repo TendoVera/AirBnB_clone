@@ -54,7 +54,7 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def emptyline(self):
-        
+
         pass
 
     def do_create(self, *arguments):
