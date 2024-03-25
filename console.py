@@ -192,22 +192,24 @@ class HBNBCommand(cmd.Cmd):
                 print(len(all_instances))
 
     def do_show(self, arg):
-        """Retrieves an instance based on its ID."""
-        if not arg:
+        """Retrieves the string representation of an instance"""
+        args = arg.split()
+        if len(args) == 0:
             print("** class name missing **")
             return
-        args = arg.split()
-        if args[0] not in storage.classes():
+        class_name = args[0]
+        if class_name not in self.class_names:
             print("** class doesn't exist **")
             return
         if len(args) < 2:
             print("** instance id missing **")
             return
-        key = args[0] + '.' + args[1]
+        instance_id = args[1]
+        key = "{}.{}".format(class_name, instance_id)
         if key not in storage.all():
             print("** no instance found **")
             return
-        print(len(all_instances))
+        print(storage.all()[key])
 
 
 def switch_objects(obj_type):
