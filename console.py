@@ -191,6 +191,24 @@ class HBNBCommand(cmd.Cmd):
 
                 print(len(all_instances))
 
+    def do_show(self, arg):
+        """Retrieves an instance based on its ID."""
+        if not arg:
+            print("** class name missing **")
+            return
+        args = arg.split()
+        if args[0] not in storage.classes():
+            print("** class doesn't exist **")
+            return
+        if len(args) < 2:
+            print("** instance id missing **")
+            return
+        key = args[0] + '.' + args[1]
+        if key not in storage.all():
+            print("** no instance found **")
+            return
+        print(len(all_instances))
+
 
 def switch_objects(obj_type):
     """Returns the object for the specified type"""
