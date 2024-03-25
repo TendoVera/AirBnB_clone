@@ -45,12 +45,14 @@ class HBNBCommand(cmd.Cmd):
 
     objs = storage.all()
 
+    prompt = "(hbnb) "
+
     def do_quit(self, arg):
-        """Exits program"""
-        sys.exit(1)
+        """Quit command to exit the program"""
+        return True
 
     def do_EOF(self, arg):
-        
+        """Exit the program by EOF (Ctrl+D)"""
         return True
 
     def emptyline(self):
