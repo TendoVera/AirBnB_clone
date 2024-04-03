@@ -1,0 +1,107 @@
+.filters {
+    display: flex;
+    align-items: stretch; 
+    border: 1px solid #DDDDDD;
+    padding: 20px 0;
+}
+
+button {
+    font-size: 18px;
+    background-color: #FF5A5F;
+    color: #FFFFFF;
+    height: 48px;
+    width: 20%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 1; 
+    margin-right: 30px;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    transition: opacity 0.3s ease; 
+}
+
+button:hover {
+    opacity: 0.9; 
+}
+
+.locations,
+.amenities {
+    width: 25%;
+    border-right: 1px solid #DDDDDD;
+    padding-right: 20px; 
+    position: relative; 
+}
+
+.locations .popover,
+.amenities .popover {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    display: none;
+    background-color: #FAFAFA;
+    width: 100%;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    list-style-type: none;
+    padding: 10px;
+}
+
+.locations:hover .popover,
+.amenities:hover .popover {
+    display: block;
+}
+
+.locations h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.amenities h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.places {
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+}
+
+.places h1 {
+    font-size: 30px;
+}
+
+.places_title{
+    padding-top: 30px;
+    margin-bottom: -25px;
+}
+
+article {
+    width: 390px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #FF5A5F;
+    border-radius: 4px;
+    text-align: center;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.places article{
+    width: 390px;
+    margin: 20px;
+    padding: 20px;
+    border: solid #FF5A5F 1px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 30px;
+}
+
+article h2 {
+    font-size: 30px;
+    margin-top: -2px;
+}
